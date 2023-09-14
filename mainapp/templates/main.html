@@ -1,0 +1,17 @@
+{%extends 'base.html' %}
+{%block content%}
+
+<div class="container" style="max-width: 1000px; margin: 0 auto; margin-top: 10%;">
+    <div class="clocks-wrapper" style="display: flex; gap: 40px; flex-wrap: wrap;">
+    {%for card in clocks%}
+    <div class="card" style="width: 18rem;">
+        
+        <div class="card-body">
+          <h5 class="card-title">{{card.title}}</h5>
+          <a href="{%url 'card-detail' card.id %}">go</a>
+        </div>
+      </div>
+    {%endfor%}
+</div>
+</div>
+{%endblock%}
